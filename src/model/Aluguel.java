@@ -35,4 +35,10 @@ public class Aluguel {
         public void setDias(Integer dias) {
                 this.dias = dias;
         }
+        public double calculototal(){
+                return filme.getValoraluguel() * dias;
+        }
+        public String getResumo(){
+                return "Cliente: " + cliente.getNome() +"\nDias: " + dias + "\nTotal: " + calculototal();
+        }
 }

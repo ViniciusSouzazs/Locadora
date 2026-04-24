@@ -29,4 +29,7 @@ public class Cliente {
     public String getContato(){
         return Nome + " " + Telefone;
     }
+    public String apresentar(){
+        return "Contato do cliente: " + getContato();
+    }
 }

@@ -6,10 +6,10 @@ public class Filme {
     private String genero;
     private Double valoraluguel;
 
-    public Filme(String titulo, String genero, Double valoraluguel) {
+    public Filme(String titulo, Double valoraluguel, String genero) {
         this.titulo = titulo;
-        this.genero = genero;
         this.valoraluguel = valoraluguel;
+        this.genero = genero;
     }
 
     public String getTitulo() {
@@ -35,7 +35,10 @@ public class Filme {
     public void setValoraluguel(Double valoraluguel) {
         this.valoraluguel = valoraluguel;
     }
-    public void exibirdetalhes(){
-        System.out.println(this.titulo + " " + this.genero + " " + this.valoraluguel);
+    public String exibirdetalhes() {
+        return "Titulo: " + this.titulo + "\nGênero: " + this.genero + "\nValor do Aluguel: " + this.valoraluguel;
+    }
+    public void aplicardesconto(double percentual){
+        valoraluguel = valoraluguel - (valoraluguel * percentual / 100);
     }
 }
